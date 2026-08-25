@@ -1,0 +1,453 @@
+:root{
+    --text: black;
+    --highlight: rgb(255, 220, 32);
+    --section: green;
+    --bland: gray;
+    --special: red;
+}
+
+
+@font-face {
+    font-family: 'matrix';
+    src: url(./fonts/OrbitronMedium-naY4.otf);
+}
+@font-face {
+    font-family: 'matrix_large';
+    src: url(./fonts/OrbitronBold-10M0.ttf);
+}
+
+
+body{
+    background-image: url("https://www.textures4photoshop.com/tex/thumbs/matrix-code-animation-gif-free-animated-background-716.gif");
+    background-size: cover;
+    font-family: "matrix";
+    color: var(--text);
+}
+
+
+h1{
+    font-size: 6.5rem;
+    text-align: center;
+    margin: 1rem;
+    font-family: "matrix_large";
+    align-self: center;
+}
+
+
+.highlight{
+    color: var(--highlight);
+}
+
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+header img{
+    width: 60%;
+    border-radius: 50%;
+}
+.the_box{
+    padding: 1rem;
+    position: relative;
+    background-color: var(--special);
+    width: 7rem;
+    height: 7rem;
+    align-self: center;
+}
+.the_box p{
+    position: relative;
+}
+
+
+.side{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.hub>section{
+    background-color: var(--section);
+    opacity: 80%;
+    margin: 1rem;
+    overflow-y: auto;
+    overscroll-behavior-y: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    height: 45rem;
+    width: 100%;
+}
+.hub>section>*{
+    margin: 1rem;
+    transition: opacity 0.75s ease;
+}
+
+
+.up, .down{
+    margin: 0 !important;
+    background-image: url(./project_images/creation.gif);
+    width: 100%;
+    height: 4rem;
+}
+
+
+.up{
+    position: sticky;
+    top: -2rem;
+    z-index: 10;
+}
+.down{
+    position: sticky;
+    bottom: 0;
+    z-index: 10;
+}
+
+
+.hub{
+    display: flex;
+}
+
+
+h2{
+    font-size: 3.5rem;
+    font-family: "matrix_large";
+}
+
+
+#about_me{
+    text-align: center;
+}
+
+
+section img{
+    width: 50%;
+    height: 50%;
+}
+
+
+p{
+    font-size: 1.7rem;
+}
+
+
+#travel_right{
+    position: absolute;
+    right: 1rem
+}
+
+
+.circle{
+    width: fit-content;
+    height: fit-content;
+    border: .3rem solid black;
+    border-radius: 5rem;
+}
+.circle h2{
+    margin: .75rem;
+}
+
+
+li.inactive{
+    color: var(--text);
+    font-size: 2rem;
+    transition: color 0.5s ease;
+}
+li.active{
+    color: var(--special);
+    transition: color 0.5s ease;
+}
+
+
+.hexagon, .overlay{
+    width: 10rem;
+    aspect-ratio: 1.1;
+    clip-path: polygon(
+        25% 0%, 75% 0%,
+        100% 50%,
+        75% 100%, 25% 100%,
+        0% 50%
+    );
+    position: relative;
+    margin: 1rem;
+    box-sizing: border-box;
+    border: 1.4rem solid var(--highlight);
+}
+
+
+.overlay {
+    border: none;
+    position: absolute;
+    inset: 0;
+    left: -2.4rem;
+    top: -2.4rem;
+    background: var(--bland);
+    opacity: 0;
+    align-content: center;
+    color: var(--text);
+}
+
+
+#puzzle{
+    display: grid;
+    gap: 1rem;
+    grid-template-areas:
+    "hexagon1 hexagon2"
+    "turn1 turn1"
+    "hexagon3 hexagon4"
+    "turn2 turn2"
+    "hexagon5 hexagon6";
+    place-items: start center;
+}
+
+
+#project1{
+    grid-area: hexagon1;
+}
+#project2{
+    grid-area: hexagon2;
+}
+#project3{
+    grid-area: hexagon3;
+}
+#project4{
+    grid-area: hexagon4;
+}
+#project5{
+    grid-area: hexagon5;
+}
+#project6{
+    grid-area: hexagon6;
+}
+#project1 .hexagon{
+    background: url('pictures+downloads/Custom_Homepage.png') center/cover no-repeat;
+}
+#project2 .hexagon{
+    background: url('pictures+downloads/Flexbox_Layout.png') center/cover no-repeat;
+}
+#project3 .hexagon{
+    background: url('pictures+downloads/PC_Store.png') center/cover no-repeat;
+}
+#project4 .hexagon{
+    background: url('pictures+downloads/Music_Mixer.png') center/cover no-repeat;
+}
+#project5 .hexagon{
+    background: url('pictures+downloads/Song_Guesser.png') center/cover no-repeat;
+}
+#project6 .hexagon{
+    background: url('pictures+downloads/Personal_Portfolio.png') center/cover no-repeat;
+}
+#turn1{
+    grid-area: turn1;
+}
+#turn2{
+    grid-area: turn2;
+}
+
+
+#puzzle a{
+    text-align: center;
+    text-decoration: none;
+    color: var(--text);
+}
+
+
+#projects{
+    text-align: center;
+}
+
+
+#project1{
+    grid-area: hexagon1;
+}
+
+
+#projects button{
+    width: 4rem;
+    height: 4rem;
+    padding: 0;
+    background-color: var(--bland);
+}
+
+
+main>button{
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+    font-size: 2rem;
+    background-color: var(--special);
+}
+
+
+footer{
+    background-color: var(--bland);
+    padding: 2rem;
+}
+
+
+.title, .certif_title, .certif_explain, .backend_title, .backend_explain, .gamedev_title, .gamedev_explain{
+    aspect-ratio: 1.1;
+    clip-path: polygon(
+        25% 0%, 75% 0%,
+        100% 50%,
+        75% 100%, 25% 100%,
+        0% 50%
+    );
+    margin: 1rem;
+    box-sizing: border-box;
+    background: var(--highlight);
+    text-align: center;
+    align-content: center;
+}
+
+
+.panel {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: auto;
+    gap: 1rem;
+    align-items: start;
+}
+
+
+.panel > * {
+    grid-column: 1 / -1;
+}
+
+
+.title{
+    width: 18rem;
+}
+.certif_title, .backend_title, .gamedev_title{
+    width: 12rem;
+}
+.backend_explain, .certif_explain, .gamedev_explain{
+    width: 22rem;
+    padding: 3rem;
+}
+.certif_title, .certif_explain, .gamedev_explain, .gamedev_title{
+    justify-self: end;
+}
+
+
+input{
+    width: 70%;
+    font-size: 1.5rem;
+}
+
+
+section.active{
+    display: block;
+    width: 100%;
+    transition: width 1.5s;
+}
+section.inactive{
+    display: none;
+    transition: width 1.5s;
+}
+
+
+#contact>*{
+    margin: 2rem;
+}
+
+
+@media (min-width:768px){
+    h1{
+        max-width: 50%;
+    }
+    header img{
+        max-width: 45%;
+    }
+    .the_box{
+        margin: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+
+    h2{
+        font-size: 5rem;
+    }
+    p{
+        font-size: 2rem;
+    }
+    .hexagon, .overlay{
+        width: 10rem;
+    }
+    h3{
+        font-size: 2.5rem;
+    }
+    .title{
+        width: 25rem;
+    }
+    .certif_title, .backend_title, .gamedev_title{
+        width: 23rem;
+    }
+    .backend_explain, .certif_explain, .gamedev_explain{
+        width: 30rem;
+        padding: 3rem;
+    }
+    input{
+        font-size: 2rem;
+    }
+    section.active{
+        width: 100%;
+    }
+    section.inactive{
+        display: block;
+        width: 3%;
+    }
+   
+    #travel_left, #travel_right{
+        display: none;
+    }
+    .hub > section > * {
+        opacity: 0;
+    }
+    .hub > section.active > * {
+        opacity: 1;
+    }
+}
+@media (min-width:1000px){
+    .hexagon, .overlay{
+        width: 15rem;
+    }
+}
+@media (min-width:1400px){
+    h1{
+        font-size: 10rem;
+    }
+
+
+    h2{
+        font-size: 7.5rem;
+    }
+    p{
+        font-size: 2.5rem;
+    }
+    h3{
+        font-size: 3rem;
+    }
+    .title{
+        width: 40rem;
+    }
+    .hexagon, .overlay{
+        width: 20rem;
+    }
+    a{
+        font-size: 2rem;
+    }
+    .certif_title, .backend_title, .gamedev_title{
+        width: 28rem;
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+    .backend_explain, .certif_explain, .gamedev_explain{
+        width: 40rem;
+        padding: 3rem;
+    }
+    input{
+        font-size: 2rem;
+    }
+}
