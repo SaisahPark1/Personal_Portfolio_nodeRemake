@@ -67,7 +67,7 @@ header img{
 }
 
 
-.hub>section{
+section{
     background-color: var(--section);
     opacity: 80%;
     margin: 1rem;

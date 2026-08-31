@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Josiah Park">
+    <meta name="description" content="portfolio josiah-park">
+    <meta property="og:title" content="Josiah's Portfolio">
+    <meta property="og:type" content="website">
+    <link rel="shortcut icon" href="favicon_io\favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <title>Personal Portfolio</title>
+</head>
+<body>
+    <section id="projects" class="active">
+        <div class="up"></div>
+        <h2>Projects</h2>
+        <div id="puzzle">
+            <a href="#" id="project1">1
+                <div class="hexagon">
+                    <div class="overlay">Custom Homepage</div>
+                </div>
+            </a>
+            <a href="#" id="project2">2
+                <div class="hexagon">
+                    <div class="overlay">Flexbox Layout</div>
+                </div>
+            </a>
+            <button id="turn1" onclick="rotateClockwise()"><img src="https://www.svgrepo.com/show/364192/arrows-clockwise-fill.svg" alt="turn-clockwise"></button>
+            <a href="#" id="project3">3
+                <div class="hexagon">
+                    <div class="overlay">PC Store</div>
+                </div>
+            </a>
+            <a href="#" id="project4">4
+                <div class="hexagon">
+                    <div class="overlay">Music Mixer</div>
+                </div>
+            </a>
+            <button id="turn2" onclick="rotateCounterClockwise()"><img src="https://www.svgrepo.com/show/364194/arrows-counter-clockwise-fill.svg" alt="turn-counter-clockwise"></button>
+            <a href="#" id="project5">5
+                <div class="hexagon">
+                    <div class="overlay">Song Guesser</div>
+                </div>
+            </a>
+            <a href="#" id="project6">6
+                <div class="hexagon">
+                    <div class="overlay">Personal Portfolio</div>
+                </div>
+            </a>
+        </div>
+        <div class="down"></div>
+    </section>
+    <footer>
+        <p>Author: Josiah Park</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./script.js"></script>
+</body>

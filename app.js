@@ -8,14 +8,23 @@ app.use(express.static(path.join(__dirname, 'event_loop')))
 
 
 app.get('/', (req,res)=>{
-    res.sendFile(path.join(__dirname,'views','home.html'))
+    res.sendFile(path.join(__dirname,'views','index.html'))
 })
 app.get('/about', (req,res)=>{
     res.sendFile(path.join(__dirname,'views','about.html'))
 })
-// app.get(/.*/, (req, res)=>{
-//     res.sendFile(path.join(__dirname,'pages','error.html'))
-// })   
+app.get('/projects', (req,res)=>{
+    res.sendFile(path.join(__dirname,'views','projects.html'))
+})
+app.get('/goals', (req,res)=>{
+    res.sendFile(path.join(__dirname,'views','goals.html'))
+})
+app.get('/contact', (req,res)=>{
+    res.sendFile(path.join(__dirname,'views','contact.html'))
+})
+app.get(/.*/, (req, res)=>{
+    res.sendFile(path.join(__dirname,'views','error.html'))
+})   
 
 app.listen(PORT,()=>{
     console.log(`Server started listening on http://localhost:${PORT}`)
