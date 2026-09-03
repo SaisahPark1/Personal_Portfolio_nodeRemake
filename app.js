@@ -27,7 +27,11 @@ app.get('/goals', (req,res)=>{
 app.get('/contact', (req,res)=>{
     res.sendFile(path.join(__dirname,'views','contact.html'))
 })
+app.get('/server-info', (req,res)=>{
+    res.sendFile(path.join(__dirname,'views','info.html'))
+})
 app.get(/.*/, (req, res)=>{
+    res.status(404)
     res.sendFile(path.join(__dirname,'views','error.html'))
 })   
 

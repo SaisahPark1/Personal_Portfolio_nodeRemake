@@ -1,3 +1,5 @@
+const os = require('os')
+
 $(document).ready(function() {
     $("li").hover(
         function() {
@@ -184,5 +186,6 @@ document.querySelectorAll(".hub > section").forEach(section => {
     });
 });
 
+document.getElementById("platform").innerHTML = "Platform: "+os.platform
 
 update();
