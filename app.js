@@ -4,7 +4,7 @@ const app = express()
 const PORT = 3000
 
 app.use(express.static(path.join(__dirname, 'public')))
-app.use(express.static(path.join(__dirname, 'event_loop')))
+// app.use(express.static(path.join(__dirname, 'event_loop')))
 
 const { getDate } = require('./event_loop/utils/time.js');
 
