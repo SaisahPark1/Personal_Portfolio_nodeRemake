@@ -1,8 +1,8 @@
 # Personal-Portfolio-Website
 A website designed to show off my programming skills and provide contact information for potentially being hired
 
-To install the dependencies, open the project terminal and type "npm i express" inside.
-To start the server, open the project terminal and type "npm start".
+To install the dependencies, open the project terminal and type "npm install" inside.
+To start the server, type "npm start" into the terminal.
 
 Once it is running, visit http://localhost:3000
 
