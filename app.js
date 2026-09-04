@@ -1,19 +1,22 @@
+const os = require('os')
 const express = require("express")
 const path = require('path')
 const app = express()
 const PORT = 3000
 
+const { getDate } = require('./public/event_loop/utils/time.js');
+const { getSystemInfo } = require("./public/event_loop/utils/system.js")
+
 app.use(express.static(path.join(__dirname, 'public')))
-// app.use(express.static(path.join(__dirname, 'event_loop')))
-
-const { getDate } = require('./event_loop/utils/time.js');
-
 
 app.get('/', (req,res)=>{
     res.sendFile(path.join(__dirname,'views','index.html'))
 })
 app.get('/api/date', (req, res) => {
   res.json({ date: getDate(new Date()) });
+});
+app.get('/api/system', (req, res) => {
+  res.json({ info: getSystemInfo(os) });
 });
 app.get('/about', (req,res)=>{
     res.sendFile(path.join(__dirname,'views','about.html'))

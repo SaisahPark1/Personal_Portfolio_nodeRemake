@@ -1,5 +1,3 @@
-const os = require('os')
-
 $(document).ready(function() {
     $("li").hover(
         function() {
@@ -64,6 +62,14 @@ const update = (() => {
 
 fetch('/api/date').then(res => res.json()).then(data => {
     document.getElementById('date-display').innerHTML = data.date;
+});
+
+fetch('/api/system').then(res => res.json()).then(data => {
+    document.getElementById('platform').innerHTML = "Platform: "+data.info[0]
+    document.getElementById('arch').innerHTML = "Architecture: "+data.info[1]
+    document.getElementById('tot-mem').innerHTML = "Total Memory: "+(data.info[2] / 1024**3).toFixed(2) + " GB"
+    document.getElementById('fre-mem').innerHTML = "Free Memory: "+(data.info[3] / 1024**3).toFixed(2) + " GB"
+    document.getElementById('uptime').innerHTML = "Uptime: "+Math.floor(data.info[4] / 3600) + " hours"
 });
 
 function travelRight() {
@@ -185,7 +191,5 @@ document.querySelectorAll(".hub > section").forEach(section => {
         }, 200);
     });
 });
-
-document.getElementById("platform").innerHTML = "Platform: "+os.platform
 
 update();
